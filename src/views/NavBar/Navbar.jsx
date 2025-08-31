@@ -5,7 +5,7 @@ import Search from "./Search";
 
 const Navbar = () => {
     return (
-        <div className=" border-solid h-[10%] flex justify-between items-center">
+        <div className="h-[10%] flex justify-between items-center">
             <div className="text-secondary flex items-center font-[Lato] gap-2 ">
                 {/* logoo */}
                 <Logo />
