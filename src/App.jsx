@@ -4,6 +4,7 @@ import "./App.css";
 import Navbar from "./views/NavBar/Navbar";
 import Footer from "./views/Footer/Footer";
 const HomePage = lazy(() => import("./pages/HomePage"));
+const SearchModule = lazy(() => import("./pages/SearchModule"));
 
 function App() {
     return (
@@ -20,10 +21,15 @@ function App() {
                     <>
                         <Routes>
                             <Route exact path="/" element={<HomePage />} />
+                            <Route
+                                exact
+                                path="/search"
+                                element={<SearchModule />}
+                            />
                         </Routes>
                     </>
                 </div>
-                <Footer /> 
+                <Footer />
             </Suspense>
         </div>
     );

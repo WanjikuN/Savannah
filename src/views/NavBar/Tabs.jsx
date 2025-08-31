@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import * as React from "react";
 import { FaBars, FaSearch, FaTimes } from "react-icons/fa";
 import Search from "./Search";
+import { handleSearchNav } from "../../services/GeneralLogic";
+import { useNavigate } from "react-router-dom";
 
 const Tabs = () => {
     const list = ["Adults", "Kids", "Trend", "My List"];
-    const [isOpen, setIsOpen] = useState(false);
-
+    const [isOpen, setIsOpen] = React.useState(false);
+    const navigate = useNavigate();
     return (
         <div className="relative">
             {/*visible only on small screens */}
@@ -40,8 +42,11 @@ const Tabs = () => {
                             {item}
                         </div>
                     ))}
-                    <div className="xs:hidden flex items-center text-secondary">
-                     <Search />
+                    <div
+                        onClick={() => handleSearchNav(navigate)}
+                        className="xs:hidden flex items-center text-secondary"
+                    >
+                        <Search />
                     </div>
                 </div>
             )}
