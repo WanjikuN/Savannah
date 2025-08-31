@@ -4,15 +4,14 @@ export default {
     theme: {
         extend: {
             colors: {
-                bodyColor: "#fff",
+                bodyColor: "#ffffff",
                 primary: "rgba(255, 105, 180, 1)",
                 primaryLight: "rgba(255, 105, 180, 0.16)",
-                secondary:"rgba(40,83,95,1)",
-                secondaryLight:"rgba(40,83,95,0.16)",
+                secondary: "rgba(40,83,95,1)",
+                secondaryLight: "rgba(40,83,95,0.16)",
                 textColor: "rgba(129, 129, 129, 1)",
                 lightTextColor: "rgba(129, 129, 129, 0.07)",
                 lightGrey: "rgba(69,83,96,1)",
-               
             },
             fontSize: {
                 h1: "40px",

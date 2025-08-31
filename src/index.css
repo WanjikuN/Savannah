@@ -13,3 +13,6 @@
     @apply text-primary bg-primary border-dashed border-secondary border-[5px] rounded-full p-2 !important;
 }
 
+.textTheme {
+    @apply text-bodyColor font-bold;
+}
