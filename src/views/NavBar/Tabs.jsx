@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaSearch, FaTimes } from "react-icons/fa";
+import Search from "./Search";
 
 const Tabs = () => {
     const list = ["Adults", "Kids", "Trend", "My List"];
@@ -29,7 +30,7 @@ const Tabs = () => {
 
             {/* Mobile menu */}
             {isOpen && (
-                <div className="absolute top-10 -left-20 shadow-lg bg-secondaryLight w-[25vw]  border-dashed border-[1px] border-primaryLight rounded flex flex-col items-center gap-4 p-4 md:hidden">
+                <div className="absolute top-10 -left-20 shadow-lg bg-secondaryLight ] w-[30vw] xs:w-[25vw]  border-dashed border-[1px] border-primaryLight rounded flex flex-col items-center gap-4 p-4 md:hidden">
                     {list.map((item, index) => (
                         <div
                             key={index}
@@ -39,6 +40,9 @@ const Tabs = () => {
                             {item}
                         </div>
                     ))}
+                    <div className="xs:hidden flex items-center text-secondary">
+                     <Search />
+                    </div>
                 </div>
             )}
         </div>
