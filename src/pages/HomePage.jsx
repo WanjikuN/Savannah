@@ -2,7 +2,7 @@ import React from "react";
 
 const HomePage = () => {
     return (
-        <div className="border-solid border-black border-[1px] h-full w-full ">
+        <div className=" h-full w-full ">
            body
         </div>
     );

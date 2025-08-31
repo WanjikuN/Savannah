@@ -4,6 +4,12 @@
 
 /* Hide scroll bar */
 ::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+    width: 0;
+    height: 0;
 }
+
+/* navbar */
+.logo {
+    @apply text-primary bg-primary border-dashed border-secondary border-[5px] rounded-full p-2 !important;
+}
+
