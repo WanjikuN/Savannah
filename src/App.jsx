@@ -7,7 +7,7 @@ const HomePage = lazy(() => import("./pages/HomePage"));
 
 function App() {
     return (
-        <div className=" px-12 bg-primaryLight h-[100vh] w-[100vw] flex flex-col">
+        <div className="px-5 xxs:px-12 bg-primaryLight h-[100vh] w-[100vw] flex flex-col">
             <Suspense
                 fallback={
                     <div className="h-screen flex justify-center items-center">
