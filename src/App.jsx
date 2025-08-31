@@ -16,7 +16,7 @@ function App() {
                 }
             >
                 <Navbar />
-                <div className="border-solid border-[1px] flex flex-row  h-[80%] overflow-hidden">
+                <div className="flex flex-row  h-[80%] overflow-hidden">
                     <>
                         <Routes>
                             <Route exact path="/" element={<HomePage />} />
