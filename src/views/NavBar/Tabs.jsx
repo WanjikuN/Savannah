@@ -1,18 +1,22 @@
 import * as React from "react";
-import { FaBars, FaSearch, FaTimes } from "react-icons/fa";
-import Search from "./Search";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { useLocation, useNavigate } from "react-router-dom";
 import { handleSearchNav } from "../../services/GeneralLogic";
-import { useNavigate } from "react-router-dom";
+import Search from "./Search";
 
 const Tabs = () => {
     const list = ["Adults", "Kids", "Trend", "My List"];
     const [isOpen, setIsOpen] = React.useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
+    const isSearchPage = location.pathname === "/search";
     return (
         <div className="relative">
             {/*visible only on small screens */}
             <div
-                className="md:hidden text-secondary text-2xl cursor-pointer"
+                className={`md:hidden ${
+                    isSearchPage ? "text-primary" : "text-secondary"
+                } text-2xl cursor-pointer`}
                 onClick={() => setIsOpen(!isOpen)}
             >
                 {isOpen ? <FaTimes /> : <FaBars />}
@@ -23,7 +27,9 @@ const Tabs = () => {
                 {list.map((item, index) => (
                     <div
                         key={index}
-                        className="cursor-pointer text-secondary hover:text-primary hover:border-b-secondary hover:border-b-[2px] text-h3"
+                        className={`cursor-pointer ${
+                            isSearchPage ? "textTheme" : "text-secondary"
+                        } hover:text-primary hover:border-b-secondary hover:border-b-[2px] text-h3`}
                     >
                         {item}
                     </div>
@@ -36,7 +42,9 @@ const Tabs = () => {
                     {list.map((item, index) => (
                         <div
                             key={index}
-                            className="cursor-pointer text-secondary hover:text-primary text-h3"
+                            className={`cursor-pointer ${
+                                isSearchPage ? "textTheme" : "text-secondary"
+                            } hover:text-primary text-h3`}
                             onClick={() => setIsOpen(false)}
                         >
                             {item}
